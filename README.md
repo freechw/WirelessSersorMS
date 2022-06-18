@@ -20,7 +20,7 @@
 
 **开源仓库：**
 
-https://gitee.com/yang-haoqing/wireless-sersor-ms
+【[GitHub链接](https://github.com/wuxiaolie/WirelessSersorMS)】  【[Gitee链接](https://gitee.com/yang-haoqing/wireless-sersor-ms)】
 
 **应用技术：**
 
