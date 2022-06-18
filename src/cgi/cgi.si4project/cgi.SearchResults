@@ -1,0 +1,4 @@
+---- storage_status Matches (3 in 3 files) ----
+env_info in data_global.h : 	unsigned char storage_status;				// 0:open 1:close
+cgiMain in env1.c : 	if (shm_buf->zg_status.env_no[STO_NO].storage_status == 1)
+cgiMain in env2.c : 	if (shm_buf->zg_status.env_no[STO_NO].storage_status == 1)

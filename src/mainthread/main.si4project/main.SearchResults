@@ -1,0 +1,15 @@
+---- dev_uart_fd Matches (14 in 4 files) ----
+data_global.c line 48 : int dev_uart_fd;   //"ttyUSB0"
+main.c line 48 : extern int dev_uart_fd;
+ReleaseResource in main.c : 	close (dev_uart_fd);
+pthread_uart_send.c line 23 : extern int dev_uart_fd;
+pthread_uart_send in pthread_uart_send.c : 			write (dev_uart_fd, &dev_uart_mask, 1);
+pthread_zigbee_rcv.c line 24 : extern int dev_uart_fd;
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 	if ((dev_uart_fd = open (DEV_ZIGBEE, O_RDWR)) < 0)
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 	serial_init (dev_uart_fd);
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 		read (dev_uart_fd, &check, 1);
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 			read (dev_uart_fd, &check, 1);
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 				read (dev_uart_fd, &check, 1);
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 					read (dev_uart_fd, &check, 1);
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 						if ((len = read (dev_uart_fd, buf.text, LEN_ENV)) != LEN_ENV)
+pthread_zigbee_rcv in pthread_zigbee_rcv.c : 								read (dev_uart_fd, buf.text+i, 1);

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实时监控</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F9FA;
+}
+-->
+</style>
+
+<link href="image/skin.css" rel="stylesheet" type="text/css" />
+<link href="image/fox.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body,td,th {
+	font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" height="29" align="center" valign="top" background="image/right_top.png"><img src="image/right_top.png" width="17" height="29" /></td>
+    <td width="1371" height="29" valign="top" background="image/right_top.png"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">实时监控</div></td>
+      </tr>
+    </table></td>
+    <td width="25" valign="top" background="image/right_top.png"><img  src="image/right_top.png" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td height="552" valign="middle" ></td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="100%" height="552" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="13" valign="top"></td>
+      </tr>
+      <tr>
+        <td height="539" valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="left_txt">当前位置：实时监控</td>
+          </tr>
+          <tr>
+            <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+              <tr>
+                <td></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="55" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10%" height="55" valign="middle"><img src="image/vedio.png" width="54" height="55" align="right"></td>
+              <td width="90%" valign="top" class="Submit"><blockquote>
+                <p>在这里，您可以查看实时图像以及图像抓拍操作。 </p>
+              </blockquote></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+              <tr>
+                <td align="left" class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;实时监控信息</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="440" align="center">
+            <!-- <img src="http://192.168.1.118:8080/?action=stream"/></td> -->
+			<script  type="text/javascript" language="javascript"> 
+			//var path1 = location.href;
+			var path1 = location.protocol + "\/\/" + location.hostname;
+			var path2;
+			function getPath(path) {
+				if(path.charAt(19) == '/') {
+					path2 = path.slice(0,19);	
+				} else if(path.charAt(20) == '/') {
+					path2 = path.slice(0,20);
+				} else if(path.charAt(18) == '/') {
+					path2 = path.slice(0,18);		
+				} else {
+					path2 = "http://192.168.0.111";
+				}
+			}
+			getPath(path1); 
+			document.write('<img src="'+path1+':8080/?action=stream"/>');
+		//	document.write('<p>');
+		//	document.write('"'+path2+':8080/?action=stream"');
+		//	document.write('</p>'); 
+            </script>
+            </td> 
+          </tr>
+          <tr>
+            <td height="43" align="center" valign="middle"><table width="25%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+              	<form id="take_photo" name="take_photo" method="post" action="cgi-bin/capture1.cgi">
+                	<td width="15%"><input type="radio" name="mode" id="mode_1" value="1" />1</td>
+                	<td width="15%"><input type="radio" name="mode" id="mode_2" value="3" />3</td>
+               	 	<td width="15%"><input type="radio" name="mode" id="mode_3" value="5" />5</td>
+                	<td width="15%"><input type="radio" name="mode" id="mode_4" value="7" />7</td>
+                	<td width="15%"><input type="radio" name="mode" id="mode_5" value="9" />9</td>
+                	<td width="25%"><input type="submit" name="take_photo" id="take_photo" value="图像抓拍" /></td>
+               </form>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle">&nbsp;</td>
+      <td height="17" valign="top">&nbsp;</td>
+    <td >&nbsp;</td>
+  </tr>
+</table>
+
+</body>
+</html>

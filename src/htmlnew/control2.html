@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>二号仓库远程控制</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F9FA;
+}
+.left_txt2 table {
+	font-size: 14px;
+}
+-->
+</style>
+
+<link href="image/skin.css" rel="stylesheet" type="text/css" />
+<link href="image/fox.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body,td,th {
+	font-size: 12px;
+}
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" height="29" valign="top" background="image/right_top.png"><img src="image/right_top.png" width="17" height="29" /></td>
+    <td width="1389" height="29" valign="top" background="image/right_top.png"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">远程控制</div></td>
+      </tr>
+    </table></td>
+    <td width="24" valign="top" background="image/right_top.png"><img src="image/right_top.png" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td height="71" valign="middle">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="100%" height="644" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="13" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="625" valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="27" class="left_txt">当前位置：二号节点;远程控制</td>
+          </tr>
+          <tr>
+            <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+              <tr>
+                <td></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="62" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10%" height="62" valign="middle"><img src="image/control.png" width="54" height="55" align="right"></td>
+              <td width="90%" valign="top" class="Submit"><blockquote>
+                <p>在这里，您可以根据您的控制要求，远程控制zigbee板的资源！<br>
+              </blockquote></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+         
+         
+              <tr>
+                <td height="30" colspan="4" align="right" class="left_txt2"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                  <tr>
+                    <td align="left" class="left_bt2">&nbsp;&nbsp;&nbsp;&nbsp;CC2530远程控制</td>
+                  </tr>
+                </table></td>
+              </tr>
+            
+              <tr>
+                <td height="30" colspan="4" class="left_txt2"><table width="100%" height="99" border="0" cellpadding="0" cellspacing="0">
+                  <tr class="left_txt2">
+             		<form id="ctl_2_m0_dev" name="ctl_2_m0_dev" method="post" action="cgi-bin/m0_led.cgi">
+                    <input type="hidden" name="store" id="hiddenField" value="2" />
+					<td width="20%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt"><span style="line-height: 25px; color: #000000; font-size: 12px;">Led</span>:</td>
+                    <td width="2%" height="30" align="right" bgcolor="#f2f2f2" class="left_txt">
+                	<input style="display:none" name="device" type="text" id="device" value="led:" size="4" maxlength="4"/></td>
+                    <td width="14%" height="30" bgcolor="#f2f2f2" class="left_txt">
+                    <input type="radio" name="led" id="led_0" value="1" />
+                    开 
+                    <input type="radio" name="led" id="led_1" value="0" />
+                    关
+                    </td>
+                    <td width="64%" height="30" align="left" bgcolor="#f2f2f2" class="left_txt">
+                    <input type="submit" value="确认提交" name="submit_led" id="submit_m0_led" /></td>
+                    </form>
+                    </tr>
+                  <tr>
+                    <form id="ctl_2_m0_dev" name="ctl_2_m0_dev" method="post" action="cgi-bin/m0_beep.cgi">
+					<input type="hidden" name="store" id="hiddenField" value="2" />
+                      <td height="30" align="right" class="left_txt2">Beep:</td>
+                      <td height="30" align="right" class="left_txt">
+                        <input style="display:none" name="device" type="text" id="device" value="beep:" size="5" maxlength="5"/></td>
+                      <td height="30" class="left_txt">
+                        <input type="radio" name="beep" id="beep_0" value="1" />
+                        开
+                        <input type="radio" name="beep" id="beep_1" value="0" />
+                        关
+                        </td>
+                      <td height="30" align="left" class="left_txt">
+                        <input type="submit" value="确认提交" name="submit_beep" id="submit_m0_beep" /></td>
+                      </form>
+                  </tr>
+ 
+                  <tr>
+                    <form id="ctl_2_m0_dev2" name="ctl_2_m0_dev" method="post" action="cgi-bin/m0_fan.cgi">
+                     <input type="hidden" name="store" id="hiddenField" value="2" />
+					 <td height="30" align="right" class="left_txt2">Fan:</td>
+                      <td height="30" align="right" class="left_txt"><input style="display:none" name="device2" type="text" id="device2" value="fan:" size="4" maxlength="4"/></td>
+                      <td height="30" class="left_txt">
+					  <input type="radio" name="fan" id="fan_1" value="1" />
+                        1&nbsp;
+                        <input type="radio" name="fan" id="fan_2" value="2" />
+                        2&nbsp;
+                        <input type="radio" name="fan" id="fan_3" value="3" />
+                        3&nbsp;
+                        <input type="radio" name="fan" id="fan_0" value="0" />
+                        关 </td>
+                      <td height="30" align="left" class="left_txt"><input type="submit" value="确认提交" name="submit_fan" id="submit_m0_fan" /></td>
+                    </form>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="right">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td >&nbsp;</td>
+  </tr>
+  <tr>
+    <td ></td>
+      <td height="17" valign="top"></td>
+    <td ></td>
+  </tr>
+</table>
+
+</body>
+</html>

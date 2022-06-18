@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<SCRIPT src="js/Clock.js" type=text/javascript></SCRIPT>
+<script language=JavaScript>
+function logout(){
+	if (confirm("您确定要退出控制面板吗？"))
+	top.location = "index.html";
+	return false;
+}
+</script>
+<script language=JavaScript1.2>
+function showsubmenu(sid) {
+	var whichEl = eval("submenu" + sid);
+	var menuTitle = eval("menuTitle" + sid);
+	if (whichEl.style.display == "none"){
+		eval("submenu" + sid + ".style.display=\"\";");
+	}else{
+		eval("submenu" + sid + ".style.display=\"none\";");
+	}
+}
+</script>
+<meta http-equiv=Content-Type content=text/html; charset=gb2312 charset=gb2312>
+<meta http-equiv="refresh" content="60">
+<script language=JavaScript1.2>
+function showsubmenu(sid) {
+	var whichEl = eval("submenu" + sid);
+	var menuTitle = eval("menuTitle" + sid);
+	if (whichEl.style.display == "none"){
+		eval("submenu" + sid + ".style.display=\"\";");
+	}else{
+		eval("submenu" + sid + ".style.display=\"none\";");
+	}
+}
+</script>
+<base target="main">
+<link href="image/skin.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body,th {
+	color: #000;
+	font-size: 18px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+</style>
+<title>无标题文档</title>
+</head>
+
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td width="1300" height="84" background="image/top.png"><table width="800" height="45" border="0" cellpadding="5" cellspacing="4" align="right">
+      <tr>
+        <td ><font color="#ff9966" face="华文隶书" size="+3">无线传感网Web管理系统！</font></td>
+        <td align="right"><a href="#" target="_self" onclick="logout();"><img src="image/out.gif" alt="安全退出" width="63" height="32" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td height="19" colspan="3" align="right">
+        <SPAN  id=clock></SPAN>
+		<SCRIPT type=text/javascript>
+    	var clock = new Clock();
+    	clock.display(document.getElementById("clock"));
+		</SCRIPT>
+        &nbsp;
+        &nbsp; 
+        </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
