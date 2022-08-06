@@ -1,0 +1,289 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         06/May/2022  20:51:36 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\Source\Human_Body_infr #
+#                          ared.c                                             #
+#    Command line       =  -f H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStac #
+#                          k-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp #
+#                          \Source\Human_Body_infrared.c -D ZTOOL_P1 -D       #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZSta #
+#                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericAp #
+#                          p\CC2530DB\CoordinatorEB\List\ -lA                 #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \List\ --diag_suppress Pe001,Pa010 -o              #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \Obj\ -e --no_code_motion --debug --core=plain     #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZSta #
+#                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericAp #
+#                          p\CC2530DB\ -I H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\Source\ -I H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-C #
+#                          C2530-2.5.1a\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \List\Human_Body_infrared.lst                      #
+#    Object file        =  H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \Obj\Human_Body_infrared.r51                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\ÎïÁªÍø¿Î³Ì±¸¿Î×¨ÓÃ\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\Human_Body_infrared.c
+      1          #include"hal_types.h"
+      2          #include"Infrare_head.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      3          uchar Not_detected[30] = "$no#\0";
+   \                     Not_detected:
+   \   000000                DS 30
+   \   00001E                REQUIRE `?<Initializer for Not_detected>`
+   \   00001E                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      4          uchar Detected[30] = "$yes#\0";
+   \                     Detected:
+   \   000000                DS 30
+   \   00001E                REQUIRE `?<Initializer for Detected>`
+   \   00001E                REQUIRE __INIT_XDATA_I
+      5          
+      6          #define HONGWAI P0_5 //å®šä¹‰P0.5å£ä¸ºçº¢å¤–æŽ§åˆ¶ç«¯
+      7          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      8          void Init_infrare(void)
+   \                     Init_infrare:
+      9          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     10            P0DIR &= ~0x20;  
+   \   000000   53FDDF       ANL     0xfd,#0xdf
+     11            P1DIR |= 0x12;  
+   \   000003   43FE12       ORL     0xfe,#0x12
+     12            
+     13              P1_1 = 0;
+   \   000006   C291         CLR     0x90.1
+     14              P1_4 = 0;
+   \   000008   C294         CLR     0x90.4
+     15              P0_1 = 0;
+   \   00000A   C281         CLR     0x80.1
+     16          }
+   \   00000C   02....       LJMP    ?BRET
+   \   00000F                REQUIRE P0DIR
+   \   00000F                REQUIRE P1DIR
+   \   00000F                REQUIRE _A_P1
+   \   00000F                REQUIRE _A_P0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     17          uchar *Infrare_checkandsend(void)
+   \                     Infrare_checkandsend:
+     18          {    
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     19              if(HONGWAI == 1)
+   \   000000   A285         MOV     C,0x80.5
+   \   000002   5006         JNC     ??Infrare_checkandsend_0
+     20               return Detected;
+   \   000004   7A..         MOV     R2,#Detected & 0xff
+   \   000006   7B..         MOV     R3,#(Detected >> 8) & 0xff
+   \   000008   8004         SJMP    ??Infrare_checkandsend_1
+     21              else
+     22               return Not_detected; 
+   \                     ??Infrare_checkandsend_0:
+   \   00000A   7A..         MOV     R2,#Not_detected & 0xff
+   \   00000C   7B..         MOV     R3,#(Not_detected >> 8) & 0xff
+   \                     ??Infrare_checkandsend_1:
+   \   00000E   02....       LJMP    ?BRET
+   \   000011                REQUIRE _A_P0
+     23          }
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for Not_detected>`:
+   \   000000   246E6F23     DB 24H, 6EH, 6FH, 23H, 0, 0
+   \            0000    
+   \   000006   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   00000E   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000016   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for Detected>`:
+   \   000000   24796573     DB 24H, 79H, 65H, 73H, 23H, 0, 0
+   \            230000  
+   \   000007   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   00000F   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   000017   00000000     DB 0, 0, 0, 0, 0, 0, 0
+   \            000000  
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Init_infrare?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Init_infrare
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Infrare_checkandsend?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Infrare_checkandsend
+
+   Maximum stack usage in bytes:
+
+     Function             ISTACK PSTACK XSTACK
+     --------             ------ ------ ------
+     Infrare_checkandsend     0      0      0
+     Init_infrare             0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                  Bytes
+     --------------                  -----
+     _A_P0                              1
+     _A_P1                              1
+     P0DIR                              1
+     P1DIR                              1
+     Not_detected                      30
+     Detected                          30
+     Init_infrare                      15
+     Infrare_checkandsend              17
+     ?<Initializer for Not_detected>   30
+     ?<Initializer for Detected>       30
+     ??Init_infrare?relay               6
+     ??Infrare_checkandsend?relay       6
+
+ 
+ 32 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  4 bytes in segment SFR_AN
+ 60 bytes in segment XDATA_I
+ 60 bytes in segment XDATA_ID
+ 
+ 104 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 4 bytes shared)
+  60 bytes of XDATA memory
+
+Errors: none
+Warnings: none

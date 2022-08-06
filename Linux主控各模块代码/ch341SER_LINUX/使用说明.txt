@@ -1,0 +1,14 @@
+﻿1 make 
+
+2 sudo make load
+
+
+3 虚拟机-》可移动设备   抓取板子对应的usb设备
+
+4 ubuntu 会生成以下串口设备文件 /dev/ttyUSB0
+
+5 操作该串口设备的代码 在serial.c中
+
+
+编译测试程序命令
+ gcc main.c -o run -lpthread

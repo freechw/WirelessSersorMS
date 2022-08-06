@@ -1,0 +1,352 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         06/May/2022  20:51:14 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\Source\Gas.c           #
+#    Command line       =  -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0   #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 H:\物联网课程备课专用\ZStac #
+#                          k-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp #
+#                          \Source\Gas.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D      #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC           #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\L #
+#                          ist\ -lA H:\物联网课程备课专用\ZStack-CC2530-2.5.1 #
+#                          a\Projects\zstack\Samples\GenericApp\CC2530DB\EndD #
+#                          eviceEB\List\ --diag_suppress Pe001,Pa010 -o       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\O #
+#                          bj\ -e --no_code_motion --debug --core=plain       #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I H:\物联网课程备课专用\ZSta #
+#                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericAp #
+#                          p\CC2530DB\ -I H:\物联网课程备课专用\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\Source\ -I H:\物联网课程备课专用\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I H:\物联网课程备课专用\ZStack-C #
+#                          C2530-2.5.1a\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I H:\物联网课程备课专用\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\L #
+#                          ist\Gas.lst                                        #
+#    Object file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\O #
+#                          bj\Gas.r51                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\Gas.c
+      1          /******************************************************************************/
+      2          #include"hal_types.h"
+      3          #include"Gas_head.h"
+
+   \                                 In  segment SFR_AN, at 0xb4
+   \   unsigned char volatile __sfr ADCCON1
+   \                     ADCCON1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf2
+   \   unsigned char volatile __sfr ADCCFG
+   \                     ADCCFG:
+   \   000000                DS 1
+      4          /*********气体变量************/
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      5          uchar GasData[SIZE];
+   \                     GasData:
+   \   000000                DS 30
+   \   00001E                REQUIRE __INIT_XDATA_Z
+      6          //char  Wrap = 0x0A;
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      7          uint16 GasLevel;
+   \                     GasLevel:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+      8          /*********************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      9          uint16 myApp_ReadGasLevel( void )
+   \                     myApp_ReadGasLevel:
+     10          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     11            uint16 reading = 0;
+     12            
+     13            /* Enable channel */
+     14            ADCCFG |= 0x80;
+   \   000000   43F280       ORL     0xf2,#0x80
+     15            
+     16            /* writing to this register starts the extra conversion */
+     17            ADCCON3 = 0x87;
+   \   000003   75B687       MOV     0xb6,#-0x79
+     18            
+     19            /* Wait for the conversion to be done */
+     20            while (!(ADCCON1 & 0x80));
+   \                     ??myApp_ReadGasLevel_0:
+   \   000006   E5B4         MOV     A,0xb4
+   \   000008   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00000A   50FA         JNC     ??myApp_ReadGasLevel_0
+     21            
+     22            /* Disable channel after done conversion */
+     23            ADCCFG &= (0x80 ^ 0xFF);
+   \   00000C   53F27F       ANL     0xf2,#0x7f
+     24            
+     25            /* Read the result */
+     26            reading = ADCL;
+   \   00000F   E5BA         MOV     A,0xba
+     27            reading |= (int16) (ADCH << 8); 
+     28            
+     29            reading >>= 8;
+     30            
+     31            return (reading);
+   \   000011   E5BB         MOV     A,0xbb
+   \   000013   FA           MOV     R2,A
+   \   000014   E4           CLR     A
+   \   000015   FB           MOV     R3,A
+   \   000016   02....       LJMP    ?BRET
+   \   000019                REQUIRE ADCCFG
+   \   000019                REQUIRE ADCCON3
+   \   000019                REQUIRE ADCCON1
+   \   000019                REQUIRE ADCL
+   \   000019                REQUIRE ADCH
+     32          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     33          uchar *GAS_readAndsend(void)
+   \                     GAS_readAndsend:
+     34          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     35                GasLevel = myApp_ReadGasLevel();
+   \   000004                ; Setup parameters for call to function myApp_ReadGasLevel
+   \   000004   12....       LCALL   ??myApp_ReadGasLevel?relay
+   \   000007   90....       MOV     DPTR,#GasLevel
+   \   00000A   EA           MOV     A,R2
+   \   00000B   F0           MOVX    @DPTR,A
+   \   00000C   A3           INC     DPTR
+   \   00000D   EB           MOV     A,R3
+   \   00000E   F0           MOVX    @DPTR,A
+     36                GasData[0] ='$';
+   \   00000F   90....       MOV     DPTR,#GasData
+   \   000012   7424         MOV     A,#0x24
+   \   000014   12....       LCALL   ?Subroutine1 & 0xFFFF
+     37                GasData[1] = GasLevel / 100 + '0';
+   \                     ??CrossCallReturnLabel_2:
+   \   000017   7A64         MOV     R2,#0x64
+   \   000019   7B00         MOV     R3,#0x0
+   \   00001B   12....       LCALL   ?US_DIV_MOD
+   \   00001E   E8           MOV     A,R0
+   \   00001F   2430         ADD     A,#0x30
+   \   000021   90....       MOV     DPTR,#GasData + 1
+   \   000024   12....       LCALL   ?Subroutine0 & 0xFFFF
+     38                GasData[2] = GasLevel / 10%10 + '0';
+   \                     ??CrossCallReturnLabel_0:
+   \   000027   12....       LCALL   ?US_DIV_MOD
+   \   00002A   7A0A         MOV     R2,#0xa
+   \   00002C   7B00         MOV     R3,#0x0
+   \   00002E   12....       LCALL   ?US_DIV_MOD
+   \   000031   EA           MOV     A,R2
+   \   000032   2430         ADD     A,#0x30
+   \   000034   90....       MOV     DPTR,#GasData + 2
+   \   000037   12....       LCALL   ?Subroutine0 & 0xFFFF
+     39                GasData[3] = GasLevel % 10 + '0';
+   \                     ??CrossCallReturnLabel_1:
+   \   00003A   12....       LCALL   ?US_DIV_MOD
+   \   00003D   EA           MOV     A,R2
+   \   00003E   2430         ADD     A,#0x30
+   \   000040   90....       MOV     DPTR,#GasData + 3
+   \   000043   F0           MOVX    @DPTR,A
+     40                GasData[4] ='#';
+   \   000044   A3           INC     DPTR
+   \   000045   7423         MOV     A,#0x23
+   \   000047   F0           MOVX    @DPTR,A
+     41                GasData[5]='\0';
+   \   000048   A3           INC     DPTR
+   \   000049   E4           CLR     A
+   \   00004A   F0           MOVX    @DPTR,A
+     42                return GasData;
+   \   00004B   7A..         MOV     R2,#GasData & 0xff
+   \   00004D   7B..         MOV     R3,#(GasData >> 8) & 0xff
+   \   00004F   D083         POP     DPH
+   \   000051   D082         POP     DPL
+   \   000053   02....       LJMP    ?BRET
+     43          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   000003   7A0A         MOV     R2,#0xa
+   \   000005   7B00         MOV     R3,#0x0
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   90....       MOV     DPTR,#GasLevel
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   F8           MOV     R0,A
+   \   000006   A3           INC     DPTR
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   F9           MOV     R1,A
+   \   000009   22           RET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??myApp_ReadGasLevel?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    myApp_ReadGasLevel
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GAS_readAndsend?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GAS_readAndsend
+
+   Maximum stack usage in bytes:
+
+     Function                ISTACK PSTACK XSTACK
+     --------                ------ ------ ------
+     GAS_readAndsend             2      0      0
+       -> myApp_ReadGasLevel     4      0      0
+     myApp_ReadGasLevel          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     ADCCON1                       1
+     ADCCON3                       1
+     ADCL                          1
+     ADCH                          1
+     ADCCFG                        1
+     GasData                      30
+     GasLevel                      2
+     myApp_ReadGasLevel           25
+     GAS_readAndsend              86
+     ?Subroutine0                  8
+     ?Subroutine1                 10
+     ??myApp_ReadGasLevel?relay    6
+     ??GAS_readAndsend?relay       6
+
+ 
+ 129 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+   5 bytes in segment SFR_AN
+  32 bytes in segment XDATA_Z
+ 
+ 141 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 5 bytes shared)
+  32 bytes of XDATA memory
+
+Errors: none
+Warnings: none

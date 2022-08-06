@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1679299502</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\hal_lcd.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\chinese.r51</file>
+      <file>$PROJ_DIR$\hal_types.h</file>
+      <file>$PROJ_DIR$\LCD3310.h</file>
+      <file>$PROJ_DIR$\LCD3310.c</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\pic.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_lcd.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+      <file>$PROJ_DIR$\hal_lcd.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\erweima.r51</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\chinese.pbi</file>
+      <file>$PROJ_DIR$\erweima.c</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\LCD3310.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\pic.r51</file>
+      <file>$PROJ_DIR$\wait.c</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\light.d51</file>
+      <file>$PROJ_DIR$\chinese.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\erweima.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\light.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\LCD3310.pbi</file>
+      <file>$PROJ_DIR$\chinese.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\wait.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_lcd.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\pic.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+      <file>$PROJ_DIR$\hal.h</file>
+      <file>$PROJ_DIR$\peng.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\peng.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\peng.pbi</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 10 32 7 11 4 20 28 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10 32 7 11 4 20 28 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 20 11 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 11 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\LCD3310.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 20 5 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 5 33</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\pic.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\erweima.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\wait.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\light.d51</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 16 9 31 35 18 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\light.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 29 2 36 30</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\chinese.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\peng.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

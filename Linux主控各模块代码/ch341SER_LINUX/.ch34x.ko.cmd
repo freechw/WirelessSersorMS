@@ -1,0 +1,1 @@
+cmd_/home/peng/ch341SER_LINUX/ch34x.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.2.0-29-generic-pae/scripts/module-common.lds --build-id  -o /home/peng/ch341SER_LINUX/ch34x.ko /home/peng/ch341SER_LINUX/ch34x.o /home/peng/ch341SER_LINUX/ch34x.mod.o

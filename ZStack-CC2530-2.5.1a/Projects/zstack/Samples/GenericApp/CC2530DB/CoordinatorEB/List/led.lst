@@ -1,0 +1,306 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         06/May/2022  20:51:36 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\Source\led.c           #
+#    Command line       =  -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 H:\物联网课程备课专用\ZStac #
+#                          k-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp #
+#                          \Source\led.c -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\Coordinat #
+#                          orEB\List\ -lA H:\物联网课程备课专用\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\CoordinatorEB\List\ --diag_suppress Pe001,Pa010  #
+#                          -o H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\Coordinato #
+#                          rEB\Obj\ -e --no_code_motion --debug --core=plain  #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I H:\物联网课程备课专用\ZSta #
+#                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericAp #
+#                          p\CC2530DB\ -I H:\物联网课程备课专用\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\Source\ -I H:\物联网课程备课专用\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I H:\物联网课程备课专用\ZStack-C #
+#                          C2530-2.5.1a\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I H:\物联网课程备课专用\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \List\led.lst                                      #
+#    Object file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \Obj\led.r51                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\led.c
+      1          #include"hal_types.h"
+      2          #include"led.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      3          uchar leddata[4];
+   \                     leddata:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+      4          #define LED1 P1_0 
+      5          #define LED2 P1_1
+      6          #define LED3 P1_4 
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      7          void InitLed(void)
+   \                     InitLed:
+      8          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      9          	P1DIR |= 0x13; 
+   \   000000   43FE13       ORL     0xfe,#0x13
+     10          	LED1 = 0;
+   \   000003                REQUIRE ?Subroutine0
+   \   000003                REQUIRE P1DIR
+   \   000003                REQUIRE _A_P1
+   \   000003                ; // Fall through to label ?Subroutine0
+     11          	LED2 = 0;
+     12          	LED3 = 0;
+     13          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   C290         CLR     0x90.0
+   \   000002   C291         CLR     0x90.1
+   \   000004   C294         CLR     0x90.4
+   \   000006   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     14          void LedOn(void)
+   \                     LedOn:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          	LED1 = 1;
+   \   000000   D290         SETB    0x90.0
+     17          	LED2 = 1;
+   \   000002   D291         SETB    0x90.1
+     18          	LED3 = 1;
+   \   000004   D294         SETB    0x90.4
+     19          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     20          void LedOff(void)
+   \                     LedOff:
+     21          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     22          	LED1 = 0;
+   \   000000   80..         SJMP    ?Subroutine0
+   \   000002                REQUIRE _A_P1
+     23          	LED2 = 0;
+     24          	LED3 = 0;
+     25          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     26          uchar *Send_LedStatus(void)
+   \                     Send_LedStatus:
+     27          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     28          	leddata[0]='$';
+   \   000004   90....       MOV     DPTR,#leddata
+   \   000007   7424         MOV     A,#0x24
+   \   000009   F0           MOVX    @DPTR,A
+     29          	if(LED1==0)
+   \   00000A   A290         MOV     C,0x90.0
+   \   00000C   A3           INC     DPTR
+   \   00000D   4004         JC      ??Send_LedStatus_0
+     30          		leddata[1]='0';
+   \   00000F   7430         MOV     A,#0x30
+   \   000011   8002         SJMP    ??Send_LedStatus_1
+     31          	else
+     32          		leddata[1]='1';
+   \                     ??Send_LedStatus_0:
+   \   000013   7431         MOV     A,#0x31
+   \                     ??Send_LedStatus_1:
+   \   000015   F0           MOVX    @DPTR,A
+     33          	leddata[2]='#';
+   \   000016   A3           INC     DPTR
+   \   000017   7423         MOV     A,#0x23
+   \   000019   F0           MOVX    @DPTR,A
+     34          	leddata[3]='\0';
+   \   00001A   A3           INC     DPTR
+   \   00001B   E4           CLR     A
+   \   00001C   F0           MOVX    @DPTR,A
+     35          	return leddata;
+   \   00001D   7A..         MOV     R2,#leddata & 0xff
+   \   00001F   7B..         MOV     R3,#(leddata >> 8) & 0xff
+   \   000021   D083         POP     DPH
+   \   000023   D082         POP     DPL
+   \   000025   02....       LJMP    ?BRET
+   \   000028                REQUIRE _A_P1
+     36          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitLed?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitLed
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LedOn?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LedOn
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LedOff?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LedOff
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Send_LedStatus?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Send_LedStatus
+
+   Maximum stack usage in bytes:
+
+     Function       ISTACK PSTACK XSTACK
+     --------       ------ ------ ------
+     InitLed            0      0      0
+     LedOff             0      0      0
+     LedOn              0      0      0
+     Send_LedStatus     2      0      0
+
+
+   Segment part sizes:
+
+     Function/Label         Bytes
+     --------------         -----
+     _A_P1                     1
+     P1DIR                     1
+     leddata                   4
+     InitLed                   3
+     ?Subroutine0              9
+     LedOn                     9
+     LedOff                    2
+     Send_LedStatus           40
+     ??InitLed?relay           6
+     ??LedOn?relay             6
+     ??LedOff?relay            6
+     ??Send_LedStatus?relay    6
+
+ 
+ 63 bytes in segment BANKED_CODE
+ 24 bytes in segment BANK_RELAYS
+  2 bytes in segment SFR_AN
+  4 bytes in segment XDATA_Z
+ 
+ 87 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 2 bytes shared)
+  4 bytes of XDATA memory
+
+Errors: none
+Warnings: none

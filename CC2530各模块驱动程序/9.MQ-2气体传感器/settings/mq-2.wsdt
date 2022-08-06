@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Mq-2/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>216</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1156</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-7253-7193</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Mq-2</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-24701-26498</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>107</YPos><SelStart>2432</SelStart><SelEnd>2432</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\&#x7269;&#x8054;&#x7F51;&#x8BFe;&#x7A0B;&#x5907;&#x8BFe;&#x4e13;&#x7528;\&#x5907;&#x8BFe;&#x7528;\1cc2530\&#x5916;&#x8BBe;\9.MQ-2&#x6C14;&#x4F53;&#x4F20;&#x611F;&#x5668;\main.c</Filename><XPos>0</XPos><YPos>80</YPos><SelStart>2588</SelStart><SelEnd>2588</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-08370638><key>iaridepm.enu1</key></Toolbar-08370638></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes><Toolbar-083824a8><key>debuggergui.enu1</key></Toolbar-083824a8></Sizes></Row3></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>683</Bottom><Right>290</Right><x>-2</x><y>-2</y><xscreen>350</xscreen><yscreen>274</yscreen><sizeHorzCX>213806</sizeHorzCX><sizeHorzCY>298800</sizeHorzCY><sizeVertCX>178375</sizeVertCX><sizeVertCY>747001</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>189</Bottom><Right>1639</Right><x>-2</x><y>-2</y><xscreen>1641</xscreen><yscreen>191</yscreen><sizeHorzCX>1002443</sizeHorzCX><sizeHorzCY>208288</sizeHorzCY><sizeVertCX>213806</sizeVertCX><sizeVertCY>298800</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

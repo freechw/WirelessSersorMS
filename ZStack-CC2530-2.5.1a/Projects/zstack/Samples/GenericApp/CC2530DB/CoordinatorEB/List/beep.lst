@@ -1,0 +1,246 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         07/May/2022  21:35:40 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\Source\beep.c          #
+#    Command line       =  -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 H:\物联网课程备课专用\ZStac #
+#                          k-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp #
+#                          \Source\beep.c -D ZTOOL_P1 -D MT_TASK -D           #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\Coordinat #
+#                          orEB\List\ -lA H:\物联网课程备课专用\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\CoordinatorEB\List\ --diag_suppress Pe001,Pa010  #
+#                          -o H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\Coordinato #
+#                          rEB\Obj\ -e --no_code_motion --debug --core=plain  #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I H:\物联网课程备课专用\ZSta #
+#                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericAp #
+#                          p\CC2530DB\ -I H:\物联网课程备课专用\ZStack-CC2530 #
+#                          -2.5.1a\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\Source\ -I H:\物联网课程备课专用\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I H:\物联网课程备课专用\ZStack-C #
+#                          C2530-2.5.1a\Projects\zstack\Samples\GenericApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I H:\物联网课程备课专用\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \List\beep.lst                                     #
+#    Object file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\CoordinatorEB #
+#                          \Obj\beep.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\beep.c
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      2          #include"beep.h"
+      3          #define BEEP_PIN P0_0        //定义P0.0定义为蜂鸣器控制口
+      4          /****************************************************************************
+      5          * 名    称: InitBeep()
+      6          * 功    能: 初始化蜂鸣器，默认关闭
+      7          * 入口参数: 无
+      8          * 出口参数: 无
+      9          ****************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     10          void InitBeep(void)
+   \                     InitBeep:
+     11          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     12          	P0DIR |= 0x01;    //P0.0定义为输出口 
+   \   000000                REQUIRE ?Subroutine0
+   \   000000                REQUIRE P0DIR
+   \   000000                REQUIRE _A_P0
+   \   000000                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   43FD01       ORL     0xfd,#0x1
+     13          	BEEP_PIN = 0;        //蜂鸣器灭
+   \   000003   C280         CLR     0x80.0
+     14          }
+   \   000005   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     15          void BeepOn(void)
+   \                     BeepOn:
+     16          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     17          	P0DIR |= 0x01;
+   \   000000   43FD01       ORL     0xfd,#0x1
+     18          	BEEP_PIN = 1;
+   \   000003   D280         SETB    0x80.0
+     19          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P0DIR
+   \   000008                REQUIRE _A_P0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     20          void BeepOff(void)
+   \                     BeepOff:
+     21          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     22          	P0DIR |= 0x01;
+   \   000000   80..         SJMP    ?Subroutine0
+   \   000002                REQUIRE P0DIR
+   \   000002                REQUIRE _A_P0
+     23          	BEEP_PIN = 0;
+     24          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitBeep?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitBeep
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??BeepOn?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    BeepOn
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??BeepOff?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    BeepOff
+
+   Maximum stack usage in bytes:
+
+     Function ISTACK PSTACK XSTACK
+     -------- ------ ------ ------
+     BeepOff      0      0      0
+     BeepOn       0      0      0
+     InitBeep     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     _A_P0               1
+     P0DIR               1
+     InitBeep            0
+     ?Subroutine0        8
+     BeepOn              8
+     BeepOff             2
+     ??InitBeep?relay    6
+     ??BeepOn?relay      6
+     ??BeepOff?relay     6
+
+ 
+ 18 bytes in segment BANKED_CODE
+ 18 bytes in segment BANK_RELAYS
+  2 bytes in segment SFR_AN
+ 
+ 36 bytes of CODE memory
+  0 bytes of DATA memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none

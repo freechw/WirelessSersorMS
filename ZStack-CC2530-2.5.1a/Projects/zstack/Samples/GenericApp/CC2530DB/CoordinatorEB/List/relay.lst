@@ -1,0 +1,347 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         29/May/2022  10:56:53 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\Source\relay.c                                 #
+#    Command line       =  -f H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530 #
+#                          \ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Gene #
+#                          ricApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.c #
+#                          fg (-DCPU32MHZ -DROOT=__near_func                  #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530 #
+#                          \ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Gene #
+#                          ricApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig. #
+#                          cfg (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0  #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2 #
+#                          .ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects #
+#                          \zstack\Samples\GenericApp\Source\relay.c -D       #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D LCD_SUPPORTED=DEBUG -lC                         #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\CoordinatorEB\List\ -lA               #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\CoordinatorEB\List\ --diag_suppress   #
+#                          Pe001,Pa010 -o H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕ #
+#                          ûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\ #
+#                          Samples\GenericApp\CC2530DB\CoordinatorEB\Obj\ -e  #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530 #
+#                          \ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Gene #
+#                          ricApp\CC2530DB\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.Ïî #
+#                          Ä¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zs #
+#                          tack\Samples\GenericApp\CC2530DB\..\Source\ -I     #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\ZMain\TI2530DB\ -I           #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\hal\include #
+#                          \ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc25 #
+#                          30\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Ge #
+#                          nericApp\CC2530DB\..\..\..\..\..\Components\hal\ta #
+#                          rget\CC2530EB\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ #
+#                          ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\Comp #
+#                          onents\mac\include\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2 #
+#                          .ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects #
+#                          \zstack\Samples\GenericApp\CC2530DB\..\..\..\..\.. #
+#                          \Components\mac\high_level\ -I                     #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\mac\low_lev #
+#                          el\srf04\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ #
+#                          ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\mac\low_level\srf04\single_chip\ -I              #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\mt\ -I      #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\osal\includ #
+#                          e\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2 #
+#                          530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\G #
+#                          enericApp\CC2530DB\..\..\..\..\..\Components\servi #
+#                          ces\saddr\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕû #
+#                          Ô´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\GenericApp\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\sdata\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2. #
+#                          ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\ #
+#                          zstack\Samples\GenericApp\CC2530DB\..\..\..\..\..\ #
+#                          Components\stack\af\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\ #
+#                          2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Project #
+#                          s\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\..\..\..\..\..\Components\stack\sapi\ #
+#                           -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc253 #
+#                          0\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Gen #
+#                          ericApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          ec\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc #
+#                          2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\..\..\..\..\..\Components\stac #
+#                          k\sys\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë #
+#                          \cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sampl #
+#                          es\GenericApp\CC2530DB\..\..\..\..\..\Components\s #
+#                          tack\zdo\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ #
+#                          ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\zmac\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Â #
+#                          ë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samp #
+#                          les\GenericApp\CC2530DB\..\..\..\..\..\Components\ #
+#                          zmac\f8w\ -Ohz --require_prototypes                #
+#    List file          =  H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\CoordinatorEB\List\relay.lst          #
+#    Object file        =  H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZS #
+#                          tack-CC2530-2.5.1a\Projects\zstack\Samples\Generic #
+#                          App\CC2530DB\CoordinatorEB\Obj\relay.r51           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓĞ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\relay.c
+      1          #include"relay.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          #include "GenericApp.h"
+      3          #define REL P1_3 
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      4          uchar relaydata[4];
+   \                     relaydata:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      5          void InitRelay(void)
+   \                     InitRelay:
+      6          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      7          	P1DIR |= 0x08;
+   \   000000   43FE08       ORL     0xfe,#0x8
+      8          	REL = 0;
+   \   000003                REQUIRE ?Subroutine0
+   \   000003                REQUIRE P1DIR
+   \   000003                REQUIRE _A_P1
+   \   000003                ; // Fall through to label ?Subroutine0
+      9          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   C293         CLR     0x90.3
+   \   000002   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     10          void RelayOn(void)
+   \                     RelayOn:
+     11          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     12          	REL = 0;
+   \   000000   80..         SJMP    ?Subroutine0
+   \   000002                REQUIRE _A_P1
+     13          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     14          void RelayOff(void)
+   \                     RelayOff:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          	REL = 1;
+   \   000000   D293         SETB    0x90.3
+     17          }
+   \   000002   02....       LJMP    ?BRET
+   \   000005                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     18          void RelyCtrl(uint8_t cmd)
+   \                     RelyCtrl:
+     19          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     20          	switch(cmd)
+   \   000000   E9           MOV     A,R1
+   \   000001   6005         JZ      ??RelyCtrl_0
+   \   000003   14           DEC     A
+   \   000004   6006         JZ      ??RelyCtrl_1
+   \   000006   8006         SJMP    ??RelyCtrl_2
+     21          	{
+     22          		case RELY_OFF:
+     23          			RelayOff();
+   \                     ??RelyCtrl_0:
+   \   000008   D293         SETB    0x90.3
+     24          			break;
+   \   00000A   8002         SJMP    ??RelyCtrl_2
+     25          		case RELY_ON:
+     26          			RelayOn();			
+   \                     ??RelyCtrl_1:
+   \   00000C   C293         CLR     0x90.3
+     27          			break;
+     28          		default:
+     29          			break;
+     30          	}
+     31          
+     32          	return;
+   \                     ??RelyCtrl_2:
+   \   00000E   02....       LJMP    ?BRET
+   \   000011                REQUIRE _A_P1
+     33          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     34          uchar *sendRelayStatus(void)
+   \                     sendRelayStatus:
+     35          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     36          	relaydata[0]='$';
+   \   000004   90....       MOV     DPTR,#relaydata
+   \   000007   7424         MOV     A,#0x24
+   \   000009   F0           MOVX    @DPTR,A
+     37          	if(REL==1)
+   \   00000A   A293         MOV     C,0x90.3
+   \   00000C   A3           INC     DPTR
+   \   00000D   5004         JNC     ??sendRelayStatus_0
+     38          		relaydata[1]='1';
+   \   00000F   7431         MOV     A,#0x31
+   \   000011   8002         SJMP    ??sendRelayStatus_1
+     39          	else
+     40          		relaydata[1]='0';
+   \                     ??sendRelayStatus_0:
+   \   000013   7430         MOV     A,#0x30
+   \                     ??sendRelayStatus_1:
+   \   000015   F0           MOVX    @DPTR,A
+     41          	relaydata[2]='#';
+   \   000016   A3           INC     DPTR
+   \   000017   7423         MOV     A,#0x23
+   \   000019   F0           MOVX    @DPTR,A
+     42          	relaydata[3]='\0';
+   \   00001A   A3           INC     DPTR
+   \   00001B   E4           CLR     A
+   \   00001C   F0           MOVX    @DPTR,A
+     43          	return relaydata;
+   \   00001D   7A..         MOV     R2,#relaydata & 0xff
+   \   00001F   7B..         MOV     R3,#(relaydata >> 8) & 0xff
+   \   000021   D083         POP     DPH
+   \   000023   D082         POP     DPL
+   \   000025   02....       LJMP    ?BRET
+   \   000028                REQUIRE _A_P1
+     44          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitRelay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitRelay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??RelayOn?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    RelayOn
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??RelayOff?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    RelayOff
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??RelyCtrl?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    RelyCtrl
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??sendRelayStatus?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    sendRelayStatus
+
+   Maximum stack usage in bytes:
+
+     Function        ISTACK PSTACK XSTACK
+     --------        ------ ------ ------
+     InitRelay           0      0      0
+     RelayOff            0      0      0
+     RelayOn             0      0      0
+     RelyCtrl            0      0      0
+     sendRelayStatus     2      0      0
+
+
+   Segment part sizes:
+
+     Function/Label          Bytes
+     --------------          -----
+     _A_P1                      1
+     P1DIR                      1
+     relaydata                  4
+     InitRelay                  3
+     ?Subroutine0               5
+     RelayOn                    2
+     RelayOff                   5
+     RelyCtrl                  17
+     sendRelayStatus           40
+     ??InitRelay?relay          6
+     ??RelayOn?relay            6
+     ??RelayOff?relay           6
+     ??RelyCtrl?relay           6
+     ??sendRelayStatus?relay    6
+
+ 
+ 72 bytes in segment BANKED_CODE
+ 30 bytes in segment BANK_RELAYS
+  2 bytes in segment SFR_AN
+  4 bytes in segment XDATA_Z
+ 
+ 102 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+   4 bytes of XDATA memory
+
+Errors: none
+Warnings: none

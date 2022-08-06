@@ -1,0 +1,5 @@
+---- myApp_ReadLightLevel Matches (4 in 3 files) ----
+SyncData in enddevice.c (Projects\zstack\Samples\GenericApp\Source) : 	EnvMsg.lux =  (unsigned int)myApp_ReadLightLevel();
+light.c (Projects\zstack\Samples\GenericApp\Source) line 4 : uint16 myApp_ReadLightLevel( void )
+send_LightLevel in light.c (Projects\zstack\Samples\GenericApp\Source) :      uint16 LightLevel = myApp_ReadLightLevel();
+light.h (Projects\zstack\Samples\GenericApp\Source) line 4 : extern uint16 myApp_ReadLightLevel( void );

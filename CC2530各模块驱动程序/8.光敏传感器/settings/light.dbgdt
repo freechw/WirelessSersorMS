@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1862</ColumnWidth1></Debug-Log>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>1396</ColumnWidth1>
+        <ColumnWidth2>372</ColumnWidth2>
+        <ColumnWidth3>93</ColumnWidth3>
+      </Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>210</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly>
+    <Watch><Format><struct_types/><watch_formats/></Format></Watch><Auto><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>195</Column0><Column1>150</Column1><Column2>100</Column2><Column3>100</Column3></Auto></Static>
+    <Windows>
+      
+      
+      
+    <Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-190-30467</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-32436-30477</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10939-30471</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>light</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd4><Wnd5><Tabs><Tab><Identity>TabID-22165-17273</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd5></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>156</YPos><SelStart>2447</SelStart><SelEnd>2447</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\type.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>325</SelStart><SelEnd>325</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\&#x7269;&#x8054;&#x7F51;&#x8BFe;&#x7A0B;&#x5907;&#x8BFe;&#x4e13;&#x7528;\&#x5907;&#x8BFe;&#x7528;\1cc2530\&#x5916;&#x8BBe;\8.&#x5149;&#x654F;&#x4F20;&#x611F;&#x5668;\main.c</Filename><XPos>0</XPos><YPos>115</YPos><SelStart>2570</SelStart><SelEnd>2570</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-04c50638><key>iaridepm.enu1</key></Toolbar-04c50638></Sizes></Row0><Row1><Sizes><Toolbar-04ceb358><key>debuggergui.enu1</key></Toolbar-04ceb358></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>688</Bottom><Right>284</Right><x>-2</x><y>-2</y><xscreen>171</xscreen><yscreen>176</yscreen><sizeHorzCX>104459</sizeHorzCX><sizeHorzCY>191930</sizeHorzCY><sizeVertCX>174710</sizeVertCX><sizeVertCY>752454</sizeVertCY></Rect></Wnd4></Sizes></Row0></Left><Right><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>688</Bottom><Right>237</Right><x>-2</x><y>-2</y><xscreen>239</xscreen><yscreen>257</yscreen><sizeHorzCX>145999</sizeHorzCX><sizeHorzCY>280262</sizeHorzCY><sizeVertCX>145999</sizeVertCX><sizeVertCY>752454</sizeVertCY></Rect></Wnd5></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>160</Bottom><Right>1639</Right><x>-2</x><y>-2</y><xscreen>1641</xscreen><yscreen>162</yscreen><sizeHorzCX>1002443</sizeHorzCX><sizeHorzCY>176663</sizeHorzCY><sizeVertCX>104459</sizeVertCX><sizeVertCY>191930</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

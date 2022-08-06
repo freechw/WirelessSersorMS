@@ -1,0 +1,458 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        06/May/2022  20:51:15 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\Source\led.c         /
+//    Command line       =  -f H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro /
+//                          jects\zstack\Samples\GenericApp\CC2530DB\..\..\.. /
+//                          \Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ          /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f         /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\To /
+//                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 H:\物联网课程备课专用\ZSta /
+//                          ck-CC2530-2.5.1a\Projects\zstack\Samples\GenericA /
+//                          pp\Source\led.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D   /
+//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
+//                          LCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC          /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB /
+//                          \List\ -lA H:\物联网课程备课专用\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          EndDeviceEB\List\ --diag_suppress Pe001,Pa010 -o  /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB /
+//                          \Obj\ -e --no_code_motion --debug --core=plain    /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\ -I         /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\Source\  /
+//                          -I H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro /
+//                          jects\zstack\Samples\GenericApp\CC2530DB\..\..\.. /
+//                          \ZMain\TI2530DB\ -I H:\物联网课程备课专用\ZStack- /
+//                          CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\..\..\Components\hal\include\   /
+//                          -I H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro /
+//                          jects\zstack\Samples\GenericApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\hal\target\CC2530EB\ -I         /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\include\ -I                    /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\high_level\ -I                 /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\low_level\srf04\ -I            /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\low_level\srf04\single_chip\   /
+//                          -I H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Pro /
+//                          jects\zstack\Samples\GenericApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mt\ -I                          /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\osal\include\ -I                   /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\services\saddr\ -I                 /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\services\sdata\ -I                 /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\af\ -I                       /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\nwk\ -I                      /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sapi\ -I                     /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sec\ -I                      /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sys\ -I                      /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\zdo\ -I                      /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\zmac\ -I                           /
+//                          H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\zmac\f8w\ -Ohz                     /
+//                          --require_prototypes                              /
+//    List file          =  H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB /
+//                          \List\led.s51                                     /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME led
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??InitLed?relay
+        FUNCTION ??InitLed?relay,0203H
+        PUBLIC ??LedOff?relay
+        FUNCTION ??LedOff?relay,0203H
+        PUBLIC ??LedOn?relay
+        FUNCTION ??LedOn?relay,0203H
+        PUBLIC ??Send_LedStatus?relay
+        FUNCTION ??Send_LedStatus?relay,0203H
+        PUBLIC InitLed
+        FUNCTION InitLed,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC LedOff
+        FUNCTION LedOff,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC LedOn
+        FUNCTION LedOn,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBWEAK P1DIR
+        PUBLIC Send_LedStatus
+        FUNCTION Send_LedStatus,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBWEAK _A_P1
+        PUBLIC leddata
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+InitLed             SYMBOL "InitLed"
+??InitLed?relay     SYMBOL "?relay", InitLed
+LedOff              SYMBOL "LedOff"
+??LedOff?relay      SYMBOL "?relay", LedOff
+LedOn               SYMBOL "LedOn"
+??LedOn?relay       SYMBOL "?relay", LedOn
+Send_LedStatus      SYMBOL "Send_LedStatus"
+??Send_LedStatus?relay SYMBOL "?relay", Send_LedStatus
+
+// H:\物联网课程备课专用\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\led.c
+//    1 #include"hal_types.h"
+//    2 #include"led.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0feH
+// unsigned char volatile __sfr P1DIR
+P1DIR:
+        DATA8
+        DS 1
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//    3 uchar leddata[4];
+leddata:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+//    4 #define LED1 P1_0 
+//    5 #define LED2 P1_1
+//    6 #define LED3 P1_4 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//    7 void InitLed(void)
+InitLed:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function InitLed
+        CODE
+//    8 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//    9 	P1DIR |= 0x13; 
+        ORL     0xfe,#0x13
+        CFI EndBlock cfiBlock0
+//   10 	LED1 = 0;
+        REQUIRE ?Subroutine0
+        REQUIRE P1DIR
+        REQUIRE _A_P1
+        ; // Fall through to label ?Subroutine0
+//   11 	LED2 = 0;
+//   12 	LED3 = 0;
+//   13 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI NoFunction
+        CLR     0x90.0
+        CLR     0x90.1
+        CLR     0x90.4
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   14 void LedOn(void)
+LedOn:
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI Function LedOn
+        CODE
+//   15 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   16 	LED1 = 1;
+        SETB    0x90.0
+//   17 	LED2 = 1;
+        SETB    0x90.1
+//   18 	LED3 = 1;
+        SETB    0x90.4
+//   19 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock2
+        REQUIRE _A_P1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   20 void LedOff(void)
+LedOff:
+        CFI Block cfiBlock3 Using cfiCommon0
+        CFI Function LedOff
+        CODE
+//   21 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   22 	LED1 = 0;
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock3
+        REQUIRE _A_P1
+//   23 	LED2 = 0;
+//   24 	LED3 = 0;
+//   25 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   26 uchar *Send_LedStatus(void)
+Send_LedStatus:
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI Function Send_LedStatus
+        CODE
+//   27 {
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   28 	leddata[0]='$';
+        MOV     DPTR,#leddata
+        MOV     A,#0x24
+        MOVX    @DPTR,A
+//   29 	if(LED1==0)
+        MOV     C,0x90.0
+        INC     DPTR
+        JC      ??Send_LedStatus_0
+//   30 		leddata[1]='0';
+        MOV     A,#0x30
+        SJMP    ??Send_LedStatus_1
+//   31 	else
+//   32 		leddata[1]='1';
+??Send_LedStatus_0:
+        MOV     A,#0x31
+??Send_LedStatus_1:
+        MOVX    @DPTR,A
+//   33 	leddata[2]='#';
+        INC     DPTR
+        MOV     A,#0x23
+        MOVX    @DPTR,A
+//   34 	leddata[3]='\0';
+        INC     DPTR
+        CLR     A
+        MOVX    @DPTR,A
+//   35 	return leddata;
+        MOV     R2,#leddata & 0xff
+        MOV     R3,#(leddata >> 8) & 0xff
+        POP     DPH
+        CFI DPH0 SameValue
+        CFI CFA_SP SP+-4
+        POP     DPL
+        CFI DPL0 SameValue
+        CFI CFA_SP SP+-3
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock4
+        REQUIRE _A_P1
+//   36 }
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??InitLed?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    InitLed
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??LedOn?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    LedOn
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??LedOff?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    LedOff
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Send_LedStatus?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Send_LedStatus
+
+        END
+// 
+// 63 bytes in segment BANKED_CODE
+// 24 bytes in segment BANK_RELAYS
+//  2 bytes in segment SFR_AN
+//  4 bytes in segment XDATA_Z
+// 
+// 87 bytes of CODE  memory
+//  0 bytes of DATA  memory (+ 2 bytes shared)
+//  4 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

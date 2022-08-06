@@ -1,0 +1,42 @@
+[DebugChecksum]
+Checksum=1377655291
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+A0=_ "D:\zigbee------\c语言版\下位机\节点二协调器\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A1=_ "D:\客户文件区\荣1993\ZStack-CC2530-2.5.1a\Components\hal\target\CC2530EB\_hal_uart_dma.c" "C:\Users\JAL\Desktop\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c"
+A2=_ "D:\客户文件区\荣1993\ZStack-CC2530-2.5.1a\Components\hal\target\CC2530EB\hal_uart.c" ""
+A3=_ "D:\客户文件区\小森天乐\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" "C:\Users\JAL\Desktop\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c"
+A4=_ "E:\大三上\ZStack-CC2530-2.5.1a\Components\mt\MT_UART.c" ""
+A5=_ "E:\大三上\ZStack-CC2530-2.5.1a\Components\zmac\f8w\zmac.c" ""
+A6=_ "E:\大三上\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A7=_ "I:\zigbee------\c语言版\下位机\节点二协调器\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=8
+SuppressDialog=1

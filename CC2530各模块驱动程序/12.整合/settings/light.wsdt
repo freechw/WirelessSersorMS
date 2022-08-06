@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>light/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>212</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1396</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>22</ColumnWidth0><ColumnWidth1>1540</ColumnWidth1></Debug-Log><Find-in-Files><ColumnWidth0>664</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>1138</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-21102-30075</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>light</ExpandedNode><ExpandedNode>light/main.c</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-713-30457</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-1944-18219</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-5364-24266</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>236</YPos><SelStart>6248</SelStart><SelEnd>6248</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_lcd.h</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>3586</SelStart><SelEnd>3586</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hal_lcd.c</Filename><XPos>0</XPos><YPos>399</YPos><SelStart>15365</SelStart><SelEnd>15365</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\inc\clib\stdarg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\inc\clib\string.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\pic.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>937</SelStart><SelEnd>937</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\chinese.h</Filename><XPos>0</XPos><YPos>141</YPos><SelStart>639</SelStart><SelEnd>639</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\hongwai.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>113</SelStart><SelEnd>113</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\beep.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>178</SelStart><SelEnd>178</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\led.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>79</SelStart><SelEnd>79</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\led.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>226</SelStart><SelEnd>226</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\relay.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>236</SelStart><SelEnd>236</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-08270320><key>iaridepm.enu1</key></Toolbar-08270320></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes><Toolbar-082c23a8><key>debuggergui.enu1</key></Toolbar-082c23a8></Sizes></Row3></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>643</Bottom><Right>303</Right><x>-2</x><y>-2</y><xscreen>116</xscreen><yscreen>105</yscreen><sizeHorzCX>70991</sizeHorzCX><sizeHorzCY>114504</sizeHorzCY><sizeVertCX>186659</sizeVertCX><sizeVertCY>703381</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>229</Bottom><Right>1636</Right><x>-2</x><y>-2</y><xscreen>1638</xscreen><yscreen>231</yscreen><sizeHorzCX>1002448</sizeHorzCX><sizeHorzCY>251908</sizeHorzCY><sizeVertCX>70991</sizeVertCX><sizeVertCY>114504</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

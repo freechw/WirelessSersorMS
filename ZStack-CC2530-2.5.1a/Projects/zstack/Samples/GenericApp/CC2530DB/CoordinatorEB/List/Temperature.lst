@@ -1,0 +1,911 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         15/Dec/2017  09:55:39 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          Source\Temperature.c                               #
+#    Command line       =  -f D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZSt #
+#                          ack-CC2530-2.5.1a\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg   #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZSt #
+#                          ack-CC2530-2.5.1a\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg  #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ #
+#                          »»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zst #
+#                          ack\Samples\GenericApp\Source\Temperature.c -D     #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D LCD_SUPPORTED=DEBUG -lC                         #
+#                          D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\CoordinatorEB\List\ -lA                   #
+#                          D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\CoordinatorEB\List\ --diag_suppress       #
+#                          Pe001,Pa010 -o D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã #
+#                          ¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Samp #
+#                          les\GenericApp\CC2530DB\CoordinatorEB\Obj\ -e      #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZSt #
+#                          ack-CC2530-2.5.1a\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµ #
+#                          ã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Sam #
+#                          ples\GenericApp\CC2530DB\..\Source\ -I             #
+#                          D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\ZMain\TI2530DB\ -I               #
+#                          D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\hal\include\    #
+#                          -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZSt #
+#                          ack-CC2530-2.5.1a\Projects\zstack\Samples\GenericA #
+#                          pp\CC2530DB\..\..\..\..\..\Components\hal\target\C #
+#                          C2530EB\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ #
+#                          ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Samples #
+#                          \GenericApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \include\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þ #
+#                          Ð­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\..\..\..\..\..\Components\ma #
+#                          c\high_level\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Ú #
+#                          µã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\mac\low_level\srf04\ -I                          #
+#                          D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\mac\low_level\s #
+#                          rf04\single_chip\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»» #
+#                          ú\½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstac #
+#                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mt\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þ #
+#                          Ð­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Sample #
+#                          s\GenericApp\CC2530DB\..\..\..\..\..\Components\os #
+#                          al\include\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã #
+#                          ¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Samp #
+#                          les\GenericApp\CC2530DB\..\..\..\..\..\Components\ #
+#                          services\saddr\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\ #
+#                          ½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\ #
+#                          Samples\GenericApp\CC2530DB\..\..\..\..\..\Compone #
+#                          nts\services\sdata\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ #
+#                          »»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\af\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»» #
+#                          ú\½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstac #
+#                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\nwk\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú #
+#                          \½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack #
+#                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sapi\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú #
+#                          \½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack #
+#                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\stack\sec\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\ #
+#                          ½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\ #
+#                          Samples\GenericApp\CC2530DB\..\..\..\..\..\Compone #
+#                          nts\stack\sys\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½ #
+#                          Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\GenericApp\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zdo\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Ú #
+#                          µã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Sa #
+#                          mples\GenericApp\CC2530DB\..\..\..\..\..\Component #
+#                          s\zmac\ -I D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­ #
+#                          µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\ #
+#                          GenericApp\CC2530DB\..\..\..\..\..\Components\zmac #
+#                          \f8w\ -Ohz --require_prototypes                    #
+#    List file          =  D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\CoordinatorEB\List\Temperature.lst        #
+#    Object file        =  D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack #
+#                          -CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\ #
+#                          CC2530DB\CoordinatorEB\Obj\Temperature.r51         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\zigbee------\cÓïÑÔ°æ\ÏÂÎ»»ú\½Úµã¶þÐ­µ÷Æ÷\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\Temperature.c
+      1          #include"head.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          #include"Temperature_head.h"
+      3          #include "hal_uart.h"
+      4          #define CL_DQ  P1_1=0
+      5          #define SET_DQ P1_1=1 
+      6          #define SET_OUT P1DIR|=0x02
+      7          #define SET_IN  P1DIR&=~0x02
+      8          #define IN_DQ  P1_1
+      9          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     10          uchar temh,teml;
+   \                     temh:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     teml:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     11          uchar wendu[30]={0};
+   \                     wendu:
+   \   000000                DS 30
+   \   00001E                REQUIRE __INIT_XDATA_Z
+     12          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     13          uchar id[8];
+   \                     id:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     14          uchar flag;
+   \                     flag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     15          uchar ds18b20_cunzai;
+   \                     ds18b20_cunzai:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     16          
+     17          #define CLKCONCMD_32MHZ  (0)
+     18          #define OSC_32KHZ  0x00
+     19          
+     20          #define HAL_BOARD_INI()                                         \
+     21          {                                                                \
+     22            uint16 i;                                                      \
+     23                                                                           \
+     24            SLEEPCMD &= ~(1<<(2));                       /* turn on 16MHz RC and 32MHz XOSC */                \
+     25            while (!(SLEEPSTA & (1 << (6))));            /* wait for 32MHz XOSC stable */                     \
+     26            asm("NOP");                                /* chip bug workaround */                            \
+     27            for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+     28            CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+     29            while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+     30            SLEEPCMD |= (1 << (2));                        /* turn off 16MHz RC */                              \
+     31          }
+     32          
+     33          /**************************************************************************************************
+     34           * @fn      HalLcd_HW_WaitUs
+     35           *
+     36           * @brief   wait for x us. @ 32MHz MCU clock it takes 32 "nop"s for 1 us delay.
+     37           *
+     38           * @param   x us. range[0-65536]
+     39           *
+     40           * @return  None
+     41           **************************************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     42          void Hal_HW_WaitUs(uint microSecs)
+   \                     Hal_HW_WaitUs:
+     43          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP    ??Hal_HW_WaitUs_0
+     44            while(microSecs--)
+     45            {
+     46              /* 1 usecs */
+     47              asm("nop"); asm("nop"); asm("nop"); 
+   \                     ??Hal_HW_WaitUs_1:
+   \   000002   00           nop
+   \   000003   00           nop
+   \   000004   00           nop
+     48            }
+   \                     ??Hal_HW_WaitUs_0:
+   \   000005   EA           MOV     A,R2
+   \   000006   F8           MOV     R0,A
+   \   000007   EB           MOV     A,R3
+   \   000008   F9           MOV     R1,A
+   \   000009   E8           MOV     A,R0
+   \   00000A   24FF         ADD     A,#-0x1
+   \   00000C   1A           DEC     R2
+   \   00000D   E9           MOV     A,R1
+   \   00000E   34FF         ADDC    A,#-0x1
+   \   000010   FB           MOV     R3,A
+   \   000011   E8           MOV     A,R0
+   \   000012   49           ORL     A,R1
+   \   000013   70ED         JNZ     ??Hal_HW_WaitUs_1
+     49          }
+   \   000015   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     50          void init_1820(void) 
+   \                     init_1820:
+     51          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     52            SET_OUT;//Ê¹P11ÎªÊä³ö×´Ì¬ 
+   \   000004   43FE02       ORL     0xfe,#0x2
+     53            SET_DQ;//Êä³ö1
+   \   000007   D291         SETB    0x90.1
+     54            Hal_HW_WaitUs(7);
+   \   000009                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000009   7A07         MOV     R2,#0x7
+   \   00000B   7B00         MOV     R3,#0x0
+   \   00000D   12....       LCALL   ??Hal_HW_WaitUs?relay
+     55            CL_DQ; //Êä³ö0
+   \   000010   C291         CLR     0x90.1
+     56            Hal_HW_WaitUs(530);//À­µÍÒ»¶ÎÊ±¼ä 
+   \   000012                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000012   7A12         MOV     R2,#0x12
+   \   000014   7B02         MOV     R3,#0x2
+   \   000016   12....       LCALL   ?Subroutine3 & 0xFFFF
+     57            
+     58            SET_DQ;//Ê¹P11Îª¸ß£¬  
+     59            SET_IN;//Ê¹P11³ÉÎªÊäÈë×´Ì¬£¬µÈ´ý18b20µÄ´æÔÚµÍÂö³å½øÀ´ 
+     60            Hal_HW_WaitUs(44); //Ê¹P11Îª1ºóµÈ´ý15-60us£¬ÕâÀïµÈ´ý44us
+   \                     ??CrossCallReturnLabel_2:
+   \   000019                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000019   7A2C         MOV     R2,#0x2c
+   \   00001B   7B00         MOV     R3,#0x0
+   \   00001D   12....       LCALL   ??Hal_HW_WaitUs?relay
+     61            if( IN_DQ == 0)
+     62              ds18b20_cunzai = 1;
+   \   000020   A291         MOV     C,0x90.1
+   \   000022   4004         JC      ??init_1820_0
+   \   000024   D2F0         SETB    B.0
+   \   000026   8002         SJMP    ??init_1820_1
+   \                     ??init_1820_0:
+   \   000028   C2F0         CLR     B.0
+   \                     ??init_1820_1:
+   \   00002A   A2F0         MOV     C,B.0
+   \   00002C   E4           CLR     A
+   \   00002D   33           RLC     A
+   \   00002E   90....       MOV     DPTR,#ds18b20_cunzai
+   \   000031   F0           MOVX    @DPTR,A
+     63                else
+     64                  ds18b20_cunzai = 0;//µÈ´ý»Ø¸´ 
+     65            Hal_HW_WaitUs(150);//»Ø¸´µÄµÍµçÆ½ÔÚ60µ½240us  
+   \   000032                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000032   7A96         MOV     R2,#-0x6a
+   \   000034   7B00         MOV     R3,#0x0
+   \   000036   12....       LCALL   ??Hal_HW_WaitUs?relay
+     66            SET_OUT; 
+   \   000039   43FE02       ORL     0xfe,#0x2
+     67            SET_DQ;//»Øµ½³õÊ¼DQ=1£»
+   \   00003C   D291         SETB    0x90.1
+     68          }
+   \   00003E   80..         SJMP    ??Subroutine5_0
+   \   000040                REQUIRE P1DIR
+   \   000040                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine5_0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL   ??Hal_HW_WaitUs?relay
+   \   000003   D291         SETB    0x90.1
+   \   000005   53FEFD       ANL     0xfe,#0xfd
+   \   000008   22           RET
+     69          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     70          void write_1820(uint x)  
+   \                     write_1820:
+     71          {  
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+     72            uchar m;    
+     73            SET_OUT;
+   \   000009   43FE02       ORL     0xfe,#0x2
+     74            for(m=0;m<8;m++)  
+   \   00000C   75..00       MOV     ?V0 + 0,#0x0
+     75            {  
+     76               CL_DQ;
+   \                     ??write_1820_0:
+   \   00000F   C291         CLR     0x90.1
+     77               Hal_HW_WaitUs(1);//¿´Ê±ÐòÍ¼£¬ÖÁÉÙÑÓÊ±1us£¬²Å²úÉúÐ´"Ê±¼äÏ¶" 
+   \   000011                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000011   7A01         MOV     R2,#0x1
+   \   000013   7B00         MOV     R3,#0x0
+   \   000015   12....       LCALL   ??Hal_HW_WaitUs?relay
+     78               if(x&(1<<m))    //Ð´Êý¾Ý£¬´ÓµÍÎ»¿ªÊ¼  
+   \   000018   75..01       MOV     ?V0 + 2,#0x1
+   \   00001B   75..00       MOV     ?V0 + 3,#0x0
+   \   00001E   E5..         MOV     A,?V0 + 0
+   \   000020   78..         MOV     R0,#?V0 + 2
+   \   000022   12....       LCALL   ?S_SHL
+   \   000025   EE           MOV     A,R6
+   \   000026   55..         ANL     A,?V0 + 2
+   \   000028   F8           MOV     R0,A
+   \   000029   EF           MOV     A,R7
+   \   00002A   55..         ANL     A,?V0 + 3
+   \   00002C   F9           MOV     R1,A
+   \   00002D   E8           MOV     A,R0
+   \   00002E   49           ORL     A,R1
+   \   00002F   6004         JZ      ??write_1820_1
+     79               SET_DQ; 
+   \   000031   D291         SETB    0x90.1
+   \   000033   8002         SJMP    ??write_1820_2
+     80               else  
+     81               CL_DQ;  
+   \                     ??write_1820_1:
+   \   000035   C291         CLR     0x90.1
+     82               Hal_HW_WaitUs(40);   //15~60us  
+   \                     ??write_1820_2:
+   \   000037                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000037   7A28         MOV     R2,#0x28
+   \   000039   7B00         MOV     R3,#0x0
+   \   00003B   12....       LCALL   ??Hal_HW_WaitUs?relay
+     83               SET_DQ;  
+   \   00003E   D291         SETB    0x90.1
+     84            }
+   \   000040   05..         INC     ?V0 + 0
+   \   000042   E5..         MOV     A,?V0 + 0
+   \   000044   C3           CLR     C
+   \   000045   9408         SUBB    A,#0x8
+   \   000047   40C6         JC      ??write_1820_0
+     85            SET_DQ;  
+   \   000049   D291         SETB    0x90.1
+     86          } 
+   \   00004B                REQUIRE ?Subroutine1
+   \   00004B                REQUIRE P1DIR
+   \   00004B                REQUIRE _A_P1
+   \   00004B                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F04         MOV     R7,#0x4
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     87          
+     88          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     89          uchar read_1820(void)  
+   \                     read_1820:
+     90          {   
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+     91            uchar temp,k,n;    
+     92            temp=0;  
+   \   000005   75..00       MOV     ?V0 + 0,#0x0
+     93            for(n=0;n<8;n++)  
+   \   000008   7E00         MOV     R6,#0x0
+     94            {  
+     95              CL_DQ; 
+   \                     ??read_1820_0:
+   \   00000A   C291         CLR     0x90.1
+     96              Hal_HW_WaitUs(1);  //¶ÁÊ±Ï¶ÆðÊ¼ÓÚÎ¢´¦ÀíÆ÷½«×ÜÏßÖÃµÍÖÁÉÙ1Î¢Ãë   
+   \   00000C                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   00000C   7A01         MOV     R2,#0x1
+   \   00000E   7B00         MOV     R3,#0x0
+   \   000010   12....       LCALL   ?Subroutine3 & 0xFFFF
+     97              SET_DQ;            //À­µÍ×ÜÏßºó½Ó×ÅÊÍ·Å×ÜÏß£¬ÈÃ´Ó»ú18b20ÄÜ¹»½Ó¹Ü×ÜÏß£¬Êä³öÓÐÐ§Êý¾Ý
+     98              SET_IN;  
+     99              k=IN_DQ;    //¶ÁÊý¾Ý,´ÓµÍÎ»¿ªÊ¼  
+    100              if(k)  
+   \                     ??CrossCallReturnLabel_3:
+   \   000013   A291         MOV     C,0x90.1
+   \   000015   75..01       MOV     ?V0 + 2,#0x1
+   \   000018   75..00       MOV     ?V0 + 3,#0x0
+   \   00001B   EE           MOV     A,R6
+   \   00001C   78..         MOV     R0,#?V0 + 2
+   \   00001E   5009         JNC     ??read_1820_1
+    101              temp|=(1<<n);  
+   \   000020   12....       LCALL   ?S_SHL
+   \   000023   E5..         MOV     A,?V0 + 2
+   \   000025   42..         ORL     ?V0 + 0,A
+   \   000027   8008         SJMP    ??read_1820_2
+    102              else  
+    103              temp&=~(1<<n);  
+   \                     ??read_1820_1:
+   \   000029   12....       LCALL   ?S_SHL
+   \   00002C   E5..         MOV     A,?V0 + 2
+   \   00002E   F4           CPL     A
+   \   00002F   52..         ANL     ?V0 + 0,A
+    104              Hal_HW_WaitUs(70); //60~120us      
+   \                     ??read_1820_2:
+   \   000031                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   000031   7A46         MOV     R2,#0x46
+   \   000033   7B00         MOV     R3,#0x0
+   \   000035   12....       LCALL   ??Hal_HW_WaitUs?relay
+    105              SET_OUT;
+   \   000038   43FE02       ORL     0xfe,#0x2
+    106            
+    107            }  
+   \   00003B   0E           INC     R6
+   \   00003C   EE           MOV     A,R6
+   \   00003D   C3           CLR     C
+   \   00003E   9408         SUBB    A,#0x8
+   \   000040   40C8         JC      ??read_1820_0
+    108            return (temp);  
+   \   000042   A9..         MOV     R1,?V0 + 0
+   \   000044   80..         SJMP    ?Subroutine1
+   \   000046                REQUIRE _A_P1
+   \   000046                REQUIRE P1DIR
+    109          }  
+    110          //ËÑË÷ID
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    111          void get_id(void)
+   \                     get_id:
+    112          {     
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    113            init_1820();        //resert
+   \   000005                ; Setup parameters for call to function init_1820
+   \   000005   12....       LCALL   ??init_1820?relay
+    114            write_1820(0x33); 
+   \   000008                ; Setup parameters for call to function write_1820
+   \   000008   7A33         MOV     R2,#0x33
+   \   00000A   7B00         MOV     R3,#0x0
+   \   00000C   12....       LCALL   ??write_1820?relay
+    115            
+    116            for(unsigned char ii=0;ii<8;ii++)
+   \   00000F   7E00         MOV     R6,#0x0
+    117            {
+    118              id[ii]=read_1820();
+   \                     ??get_id_0:
+   \   000011                ; Setup parameters for call to function read_1820
+   \   000011   12....       LCALL   ??read_1820?relay
+   \   000014   8E..         MOV     ?V0 + 0,R6
+   \   000016   74..         MOV     A,#id & 0xff
+   \   000018   25..         ADD     A,?V0 + 0
+   \   00001A   F582         MOV     DPL,A
+   \   00001C   74..         MOV     A,#(id >> 8) & 0xff
+   \   00001E   3400         ADDC    A,#0x0
+   \   000020   F583         MOV     DPH,A
+   \   000022   E9           MOV     A,R1
+   \   000023   F0           MOVX    @DPTR,A
+    119            }
+   \   000024   0E           INC     R6
+   \   000025   EE           MOV     A,R6
+   \   000026   C3           CLR     C
+   \   000027   9408         SUBB    A,#0x8
+   \   000029   40E6         JC      ??get_id_0
+    120          }
+   \   00002B   7F02         MOV     R7,#0x2
+   \   00002D   02....       LJMP    ?BANKED_LEAVE_XDATA
+    121          
+    122          
+    123           
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001                REQUIRE ??Subroutine5_0
+   \   000001                ; // Fall through to label ??Subroutine5_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    124          void read_data(void)
+   \                     read_data:
+    125          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    126            uchar a,b,c;
+    127          
+    128            init_1820();  //¸´Î»18b20  
+   \   000004                ; Setup parameters for call to function init_1820
+   \   000004   12....       LCALL   ?Subroutine2 & 0xFFFF
+    129            write_1820(0xcc);   // ·¢³ö×ª»»ÃüÁî ËÑË÷Æ÷¼þ 
+    130            write_1820(0x44);     //Æô¶¯  
+   \                     ??CrossCallReturnLabel_0:
+   \   000007                ; Setup parameters for call to function write_1820
+   \   000007   7A44         MOV     R2,#0x44
+   \   000009   7B00         MOV     R3,#0x0
+   \   00000B   12....       LCALL   ??write_1820?relay
+    131            Hal_HW_WaitUs(2000);
+   \   00000E                ; Setup parameters for call to function Hal_HW_WaitUs
+   \   00000E   7AD0         MOV     R2,#-0x30
+   \   000010   7B07         MOV     R3,#0x7
+   \   000012   12....       LCALL   ??Hal_HW_WaitUs?relay
+    132            init_1820();  
+   \   000015                ; Setup parameters for call to function init_1820
+   \   000015   12....       LCALL   ?Subroutine2 & 0xFFFF
+    133            write_1820(0xcc);
+    134            write_1820(0xbe); 
+   \                     ??CrossCallReturnLabel_1:
+   \   000018                ; Setup parameters for call to function write_1820
+   \   000018   7ABE         MOV     R2,#-0x42
+   \   00001A   7B00         MOV     R3,#0x0
+   \   00001C   12....       LCALL   ??write_1820?relay
+    135                 
+    136            teml=read_1820();  //¶ÁÊý¾Ý  
+   \   00001F                ; Setup parameters for call to function read_1820
+   \   00001F   12....       LCALL   ??read_1820?relay
+   \   000022   E9           MOV     A,R1
+   \   000023   90....       MOV     DPTR,#teml
+   \   000026   F0           MOVX    @DPTR,A
+    137            temh=read_1820();  
+   \   000027                ; Setup parameters for call to function read_1820
+   \   000027   12....       LCALL   ??read_1820?relay
+   \   00002A   E9           MOV     A,R1
+   \   00002B   90....       MOV     DPTR,#temh
+   \   00002E   F0           MOVX    @DPTR,A
+    138            if(temh&0x80)//ÅÐ¶ÏÕý¸º
+   \   00002F   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000031   90....       MOV     DPTR,#flag
+   \   000034   5017         JNC     ??read_data_0
+    139            {
+    140              flag=1;
+   \   000036   7401         MOV     A,#0x1
+   \   000038   F0           MOVX    @DPTR,A
+    141              c=0;
+    142              c=c|temh;
+    143              c=c&0x00ff;
+    144              c=c<<8;
+    145              a=c;
+    146          
+    147              a=c|teml;
+    148          
+    149              a=(a^0xffff);//Òì»ò
+    150              a=a+1;  //È¡·´¼Ó1
+   \   000039   90....       MOV     DPTR,#teml
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   F4           CPL     A
+   \   00003E   04           INC     A
+   \   00003F   F8           MOV     R0,A
+    151              teml=a&0x0f;
+   \   000040   740F         MOV     A,#0xf
+   \   000042   58           ANL     A,R0
+   \   000043   F0           MOVX    @DPTR,A
+    152              temh=a>>4;
+   \   000044   E8           MOV     A,R0
+   \   000045   C4           SWAP    A
+   \   000046   540F         ANL     A,#0xf
+   \   000048   90....       MOV     DPTR,#temh
+   \   00004B   8019         SJMP    ??read_data_1
+    153            }
+    154            else
+    155            {
+    156              flag=0;   //ÎªÕý
+   \                     ??read_data_0:
+   \   00004D   E4           CLR     A
+   \   00004E   F0           MOVX    @DPTR,A
+    157              a=temh<<4;
+    158              a+=(teml&0xf0)>>4; //µÃµ½¸ßÎ»µÄÖµ
+    159              b=teml&0x0f;
+    160              temh=a;
+   \   00004F   90....       MOV     DPTR,#teml
+   \   000052   E0           MOVX    A,@DPTR
+   \   000053   C4           SWAP    A
+   \   000054   540F         ANL     A,#0xf
+   \   000056   F8           MOV     R0,A
+   \   000057   90....       MOV     DPTR,#temh
+   \   00005A   E0           MOVX    A,@DPTR
+   \   00005B   C4           SWAP    A
+   \   00005C   54F0         ANL     A,#0xf0
+   \   00005E   28           ADD     A,R0
+   \   00005F   F0           MOVX    @DPTR,A
+    161              teml=b&0x00ff;
+   \   000060   90....       MOV     DPTR,#teml
+   \   000063   E0           MOVX    A,@DPTR
+   \   000064   540F         ANL     A,#0xf
+    162            }
+   \                     ??read_data_1:
+   \   000066   02....       LJMP    ?Subroutine0 & 0xFFFF
+    163          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   ??init_1820?relay
+   \   000003                ; Setup parameters for call to function write_1820
+   \   000003                ; Setup parameters for call to function write_1820
+   \   000003   7ACC         MOV     R2,#-0x34
+   \   000005   7B00         MOV     R3,#0x0
+   \   000007   12....       LCALL   ??write_1820?relay
+   \   00000A   22           RET
+    164          
+    165          /******************************************************************************
+    166           * @fn          myApp_ReadTemperature
+    167           *
+    168           * @brief       Reports temperature sensor reading
+    169           *
+    170           * @param
+    171           *
+    172           * @return
+    173           ******************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    174          void myApp_ReadTemperature( void )
+   \                     myApp_ReadTemperature:
+    175          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    176          	wendu[0]='$';
+   \   000004   90....       MOV     DPTR,#wendu
+   \   000007   7424         MOV     A,#0x24
+   \   000009   F0           MOVX    @DPTR,A
+    177          	uint num;
+    178          	read_data();           // ¶ÁÈ¡ÎÂ¶È
+   \   00000A                ; Setup parameters for call to function read_data
+   \   00000A   12....       LCALL   ??read_data?relay
+    179          	num=teml*625;          //Ð¡Êý²¿·ÖµÄÈ¡ÖµÃ¿Î»´ú±í0.0625£¨¾«¶È£©
+   \   00000D   90....       MOV     DPTR,#teml
+   \   000010   E0           MOVX    A,@DPTR
+   \   000011   F8           MOV     R0,A
+   \   000012   75F071       MOV     B,#0x71
+   \   000015   A4           MUL     AB
+   \   000016   C8           XCH     A,R0
+   \   000017   AAF0         MOV     R2,B
+   \   000019   75F002       MOV     B,#0x2
+   \   00001C   A4           MUL     AB
+   \   00001D   2A           ADD     A,R2
+   \   00001E   F9           MOV     R1,A
+    180          	if(flag==1)            //ÅÐ¶ÏÕý¸ºÎÂ¶È
+   \   00001F   90....       MOV     DPTR,#flag
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   6401         XRL     A,#0x1
+   \   000025   90....       MOV     DPTR,#wendu + 1
+   \   000028   7004         JNZ     ??myApp_ReadTemperature_0
+    181          	{
+    182          		wendu[1]='-';              //+0x2d Îª±ä"-"ASCIIÂë
+   \   00002A   742D         MOV     A,#0x2d
+   \   00002C   8002         SJMP    ??myApp_ReadTemperature_1
+    183          	}
+    184          	else 
+    185          		wendu[1]='+';  
+   \                     ??myApp_ReadTemperature_0:
+   \   00002E   742B         MOV     A,#0x2b
+   \                     ??myApp_ReadTemperature_1:
+   \   000030   F0           MOVX    @DPTR,A
+    186          	
+    187          	if((temh/10%10==0)&&(temh/100==0))
+   \   000031   75F00A       MOV     B,#0xa
+   \   000034   90....       MOV     DPTR,#temh
+   \   000037   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00003A   700E         JNZ     ??myApp_ReadTemperature_2
+   \   00003C   75F064       MOV     B,#0x64
+   \   00003F   E0           MOVX    A,@DPTR
+   \   000040   84           DIV     AB
+   \   000041   7007         JNZ     ??myApp_ReadTemperature_2
+    188          		wendu[2]='0';
+   \   000043   90....       MOV     DPTR,#wendu + 2
+   \   000046   7430         MOV     A,#0x30
+   \   000048   800B         SJMP    ??myApp_ReadTemperature_3
+    189          	else 
+    190          		wendu[2]=temh/10%10+0x30;
+   \                     ??myApp_ReadTemperature_2:
+   \   00004A   75F00A       MOV     B,#0xa
+   \   00004D   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   000050   2430         ADD     A,#0x30
+   \   000052   90....       MOV     DPTR,#wendu + 2
+   \                     ??myApp_ReadTemperature_3:
+   \   000055   F0           MOVX    @DPTR,A
+    191          
+    192          	wendu[3]=temh%10+0x30;
+   \   000056   90....       MOV     DPTR,#temh
+   \   000059   E0           MOVX    A,@DPTR
+   \   00005A   75F00A       MOV     B,#0xa
+   \   00005D   84           DIV     AB
+   \   00005E   E5F0         MOV     A,B
+   \   000060   2430         ADD     A,#0x30
+   \   000062   90....       MOV     DPTR,#wendu + 3
+   \   000065   F0           MOVX    @DPTR,A
+    193          	wendu[4]='.';
+   \   000066   A3           INC     DPTR
+   \   000067   742E         MOV     A,#0x2e
+   \   000069   F0           MOVX    @DPTR,A
+    194          	wendu[5]=num/1000+0x30;//ºöÂÔÐ¡Êýµãºó1Î»µÄÊý
+   \   00006A   7AE8         MOV     R2,#-0x18
+   \   00006C   7B03         MOV     R3,#0x3
+   \   00006E   12....       LCALL   ?US_DIV_MOD
+   \   000071   E8           MOV     A,R0
+   \   000072   2430         ADD     A,#0x30
+   \   000074   A3           INC     DPTR
+   \   000075   F0           MOVX    @DPTR,A
+    195          	wendu[6]='#';//½áÊøÎ»
+   \   000076   A3           INC     DPTR
+   \   000077   7423         MOV     A,#0x23
+   \   000079   F0           MOVX    @DPTR,A
+    196          	wendu[7]='\0';
+   \   00007A   A3           INC     DPTR
+   \   00007B   E4           CLR     A
+   \   00007C   02....       LJMP    ?Subroutine0 & 0xFFFF
+    197          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   84           DIV     AB
+   \   000002   75F00A       MOV     B,#0xa
+   \   000005   84           DIV     AB
+   \   000006   E5F0         MOV     A,B
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    198          uchar *Temperature_readAndsend(void)
+   \                     Temperature_readAndsend:
+    199          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    200              myApp_ReadTemperature();
+   \   000004                ; Setup parameters for call to function myApp_ReadTemperature
+   \   000004   12....       LCALL   ??myApp_ReadTemperature?relay
+    201               return wendu;
+   \   000007   7A..         MOV     R2,#wendu & 0xff
+   \   000009   7B..         MOV     R3,#(wendu >> 8) & 0xff
+   \   00000B   02....       LJMP    ??Subroutine5_0 & 0xFFFF
+    202          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Hal_HW_WaitUs?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Hal_HW_WaitUs
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??init_1820?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    init_1820
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??write_1820?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    write_1820
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??read_1820?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    read_1820
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??get_id?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    get_id
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??read_data?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    read_data
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??myApp_ReadTemperature?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    myApp_ReadTemperature
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Temperature_readAndsend?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Temperature_readAndsend
+
+   Maximum stack usage in bytes:
+
+     Function                   ISTACK PSTACK XSTACK
+     --------                   ------ ------ ------
+     Hal_HW_WaitUs                  0      0     12
+     Temperature_readAndsend        2      0      0
+       -> myApp_ReadTemperature     4      0      0
+     get_id                         1      0     10
+       -> init_1820                 0      0     20
+       -> write_1820                0      0     20
+       -> read_1820                 0      0     20
+     init_1820                      2      0     10
+       -> Hal_HW_WaitUs             4      0      0
+       -> Hal_HW_WaitUs             4      0      0
+       -> Hal_HW_WaitUs             4      0      0
+       -> Hal_HW_WaitUs             4      0      0
+     myApp_ReadTemperature          2      0      0
+       -> read_data                 4      0      0
+     read_1820                      0      0     22
+       -> Hal_HW_WaitUs             0      0     24
+       -> Hal_HW_WaitUs             0      0     24
+     read_data                      2      0      0
+       -> init_1820                 4      0      0
+       -> write_1820                4      0      0
+       -> write_1820                4      0      0
+       -> Hal_HW_WaitUs             4      0      0
+       -> init_1820                 4      0      0
+       -> write_1820                4      0      0
+       -> write_1820                4      0      0
+       -> read_1820                 4      0      0
+       -> read_1820                 4      0      0
+     write_1820                     0      0     22
+       -> Hal_HW_WaitUs             0      0     24
+       -> Hal_HW_WaitUs             0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                  Bytes
+     --------------                  -----
+     _A_P1                              1
+     P1DIR                              1
+     temh                               1
+     teml                               1
+     wendu                             30
+     id                                 8
+     flag                               1
+     ds18b20_cunzai                     1
+     Hal_HW_WaitUs                     24
+     init_1820                         64
+     ??Subroutine5_0                    7
+     ?Subroutine3                       9
+     write_1820                        75
+     ?Subroutine1                       5
+     read_1820                         70
+     get_id                            48
+     ?Subroutine0                       1
+     read_data                        105
+     ?Subroutine2                      11
+     myApp_ReadTemperature            127
+     ?Subroutine4                       9
+     Temperature_readAndsend           14
+     ??Hal_HW_WaitUs?relay              6
+     ??init_1820?relay                  6
+     ??write_1820?relay                 6
+     ??read_1820?relay                  6
+     ??get_id?relay                     6
+     ??read_data?relay                  6
+     ??myApp_ReadTemperature?relay      6
+     ??Temperature_readAndsend?relay    6
+
+ 
+ 569 bytes in segment BANKED_CODE
+  48 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+  42 bytes in segment XDATA_Z
+ 
+ 617 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+  42 bytes of XDATA memory
+
+Errors: none
+Warnings: none

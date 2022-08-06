@@ -1,0 +1,511 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        29/May/2022  10:56:53 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\Source\relay.c                              /
+//    Command line       =  -f H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc253 /
+//                          0\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Ge /
+//                          nericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoor /
+//                          d.cfg (-DCPU32MHZ -DROOT=__near_func              /
+//                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                  /
+//                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8        /
+//                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)   /
+//                          -f H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc253 /
+//                          0\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\Ge /
+//                          nericApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConf /
+//                          ig.cfg (-DZIGBEEPRO -DSECURE=0                    /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\ /
+//                          2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projec /
+//                          ts\zstack\Samples\GenericApp\Source\relay.c -D    /
+//                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D             /
+//                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC            /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\CoordinatorEB\List\ -lA            /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\CoordinatorEB\List\                /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\CoordinatorEB\Obj\ -e              /
+//                          --no_code_motion --debug --core=plain             /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.Ïî /
+//                          Ä¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\z /
+//                          stack\Samples\GenericApp\CC2530DB\..\Source\ -I   /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I        /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\hal\incl /
+//                          ude\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\ /
+//                          cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sampl /
+//                          es\GenericApp\CC2530DB\..\..\..\..\..\Components\ /
+//                          hal\target\CC2530EB\ -I                           /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\mac\incl /
+//                          ude\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\ /
+//                          cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sampl /
+//                          es\GenericApp\CC2530DB\..\..\..\..\..\Components\ /
+//                          mac\high_level\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.Ïî /
+//                          Ä¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\z /
+//                          stack\Samples\GenericApp\CC2530DB\..\..\..\..\..\ /
+//                          Components\mac\low_level\srf04\ -I                /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\mac\low_ /
+//                          level\srf04\single_chip\ -I                       /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\mt\ -I   /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\osal\inc /
+//                          lude\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë /
+//                          \cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samp /
+//                          les\GenericApp\CC2530DB\..\..\..\..\..\Components /
+//                          \services\saddr\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.Ï /
+//                          îÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\ /
+//                          zstack\Samples\GenericApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\services\sdata\ -I                    /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\stack\af /
+//                          \ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2 /
+//                          530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\ /
+//                          GenericApp\CC2530DB\..\..\..\..\..\Components\sta /
+//                          ck\nwk\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´ /
+//                          Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Sa /
+//                          mples\GenericApp\CC2530DB\..\..\..\..\..\Componen /
+//                          ts\stack\sapi\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ /
+//                          ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          omponents\stack\sec\ -I                           /
+//                          H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\..\..\..\..\..\Components\stack\sy /
+//                          s\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc /
+//                          2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples /
+//                          \GenericApp\CC2530DB\..\..\..\..\..\Components\st /
+//                          ack\zdo\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ /
+//                          ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\S /
+//                          amples\GenericApp\CC2530DB\..\..\..\..\..\Compone /
+//                          nts\zmac\ -I H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕû /
+//                          Ô´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\ /
+//                          Samples\GenericApp\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\zmac\f8w\ -Ohz --require_prototypes          /
+//    List file          =  H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\Z /
+//                          Stack-CC2530-2.5.1a\Projects\zstack\Samples\Gener /
+//                          icApp\CC2530DB\CoordinatorEB\List\relay.s51       /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME relay
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??InitRelay?relay
+        FUNCTION ??InitRelay?relay,0203H
+        PUBLIC ??RelayOff?relay
+        FUNCTION ??RelayOff?relay,0203H
+        PUBLIC ??RelayOn?relay
+        FUNCTION ??RelayOn?relay,0203H
+        PUBLIC ??RelyCtrl?relay
+        FUNCTION ??RelyCtrl?relay,0203H
+        PUBLIC ??sendRelayStatus?relay
+        FUNCTION ??sendRelayStatus?relay,0203H
+        PUBLIC InitRelay
+        FUNCTION InitRelay,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBWEAK P1DIR
+        PUBLIC RelayOff
+        FUNCTION RelayOff,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC RelayOn
+        FUNCTION RelayOn,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC RelyCtrl
+        FUNCTION RelyCtrl,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBWEAK _A_P1
+        PUBLIC relaydata
+        PUBLIC sendRelayStatus
+        FUNCTION sendRelayStatus,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+InitRelay           SYMBOL "InitRelay"
+??InitRelay?relay   SYMBOL "?relay", InitRelay
+RelayOff            SYMBOL "RelayOff"
+??RelayOff?relay    SYMBOL "?relay", RelayOff
+RelayOn             SYMBOL "RelayOn"
+??RelayOn?relay     SYMBOL "?relay", RelayOn
+RelyCtrl            SYMBOL "RelyCtrl"
+??RelyCtrl?relay    SYMBOL "?relay", RelyCtrl
+sendRelayStatus     SYMBOL "sendRelayStatus"
+??sendRelayStatus?relay SYMBOL "?relay", sendRelayStatus
+
+// H:\ÎïÁªÍøÊµÑµÏîÄ¿ËùÓÐ×ÊÁÏ\2.ÏîÄ¿ÍêÕûÔ´Âë\cc2530\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\GenericApp\Source\relay.c
+//    1 #include"relay.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0feH
+// unsigned char volatile __sfr P1DIR
+P1DIR:
+        DATA8
+        DS 1
+//    2 #include "GenericApp.h"
+//    3 #define REL P1_3 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//    4 uchar relaydata[4];
+relaydata:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//    5 void InitRelay(void)
+InitRelay:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function InitRelay
+        CODE
+//    6 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//    7 	P1DIR |= 0x08;
+        ORL     0xfe,#0x8
+        CFI EndBlock cfiBlock0
+//    8 	REL = 0;
+        REQUIRE ?Subroutine0
+        REQUIRE P1DIR
+        REQUIRE _A_P1
+        ; // Fall through to label ?Subroutine0
+//    9 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI NoFunction
+        CLR     0x90.3
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   10 void RelayOn(void)
+RelayOn:
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI Function RelayOn
+        CODE
+//   11 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   12 	REL = 0;
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock2
+        REQUIRE _A_P1
+//   13 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   14 void RelayOff(void)
+RelayOff:
+        CFI Block cfiBlock3 Using cfiCommon0
+        CFI Function RelayOff
+        CODE
+//   15 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   16 	REL = 1;
+        SETB    0x90.3
+//   17 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock3
+        REQUIRE _A_P1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   18 void RelyCtrl(uint8_t cmd)
+RelyCtrl:
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI Function RelyCtrl
+        CODE
+//   19 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   20 	switch(cmd)
+        MOV     A,R1
+        JZ      ??RelyCtrl_0
+        DEC     A
+        JZ      ??RelyCtrl_1
+        SJMP    ??RelyCtrl_2
+//   21 	{
+//   22 		case RELY_OFF:
+//   23 			RelayOff();
+??RelyCtrl_0:
+        SETB    0x90.3
+//   24 			break;
+        SJMP    ??RelyCtrl_2
+//   25 		case RELY_ON:
+//   26 			RelayOn();			
+??RelyCtrl_1:
+        CLR     0x90.3
+//   27 			break;
+//   28 		default:
+//   29 			break;
+//   30 	}
+//   31 
+//   32 	return;
+??RelyCtrl_2:
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock4
+        REQUIRE _A_P1
+//   33 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   34 uchar *sendRelayStatus(void)
+sendRelayStatus:
+        CFI Block cfiBlock5 Using cfiCommon0
+        CFI Function sendRelayStatus
+        CODE
+//   35 {
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   36 	relaydata[0]='$';
+        MOV     DPTR,#relaydata
+        MOV     A,#0x24
+        MOVX    @DPTR,A
+//   37 	if(REL==1)
+        MOV     C,0x90.3
+        INC     DPTR
+        JNC     ??sendRelayStatus_0
+//   38 		relaydata[1]='1';
+        MOV     A,#0x31
+        SJMP    ??sendRelayStatus_1
+//   39 	else
+//   40 		relaydata[1]='0';
+??sendRelayStatus_0:
+        MOV     A,#0x30
+??sendRelayStatus_1:
+        MOVX    @DPTR,A
+//   41 	relaydata[2]='#';
+        INC     DPTR
+        MOV     A,#0x23
+        MOVX    @DPTR,A
+//   42 	relaydata[3]='\0';
+        INC     DPTR
+        CLR     A
+        MOVX    @DPTR,A
+//   43 	return relaydata;
+        MOV     R2,#relaydata & 0xff
+        MOV     R3,#(relaydata >> 8) & 0xff
+        POP     DPH
+        CFI DPH0 SameValue
+        CFI CFA_SP SP+-4
+        POP     DPL
+        CFI DPL0 SameValue
+        CFI CFA_SP SP+-3
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock5
+        REQUIRE _A_P1
+//   44 }
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??InitRelay?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    InitRelay
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??RelayOn?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    RelayOn
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??RelayOff?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    RelayOff
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??RelyCtrl?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    RelyCtrl
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??sendRelayStatus?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    sendRelayStatus
+
+        END
+// 
+// 72 bytes in segment BANKED_CODE
+// 30 bytes in segment BANK_RELAYS
+//  2 bytes in segment SFR_AN
+//  4 bytes in segment XDATA_Z
+// 
+// 102 bytes of CODE  memory
+//   0 bytes of DATA  memory (+ 2 bytes shared)
+//   4 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

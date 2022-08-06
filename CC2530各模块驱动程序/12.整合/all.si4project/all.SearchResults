@@ -1,0 +1,4 @@
+---- P0SEL Matches (3 in 3 files) ----
+Init_infrare in hongwai.c : 	P0SEL &= ~0x20; 
+InitUart in main.c :     P0SEL |= 0x0c;            //P0_2,P0_3鐢ㄤ綔涓插彛锛堝璁惧姛鑳斤級
+InitUart in UART.C :     P0SEL = 0x0c;            //P0_2,P0_3,P0_4,P0_5用作串口,第二功能 
